@@ -13,13 +13,14 @@ using System.Text;
 using System;
 
 
+
 namespace problemSolving{
 
-    public class solutions
+    public class Solutions
     {
         
 
-        static int simpleArraySum(int[] ar) 
+        public static int simpleArraySum(int[] ar) 
         {
         /*
          * Write your code here.
@@ -32,7 +33,7 @@ namespace problemSolving{
         return a;
         }
 
-        public List<int> compareTriplets(List<int> a, List<int> b) 
+        public static List<int> compareTriplets(List<int> a, List<int> b) 
         {
             int scoreA = 0;
             int scoreB = 0;
@@ -54,7 +55,7 @@ namespace problemSolving{
         }
 
 
-        static long aVeryBigSum(long[] ar) 
+        public static long aVeryBigSum(long[] ar) 
         {
             long a = 0;
             foreach (int i in ar)
