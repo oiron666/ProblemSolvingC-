@@ -34,7 +34,9 @@ namespace problemSolving{
             // System.Console.WriteLine(result[0]);
             // System.Console.WriteLine(result[1]);
 
-            System.Console.WriteLine("choose problem to solve \n1. simpleArraySum \n2. compareTriplets \n3. aVeryBigsum");
+
+
+            System.Console.WriteLine("choose problem to solve \n1. simpleArraySum \n2. compareTriplets \n3. aVeryBigsum \n4. Diagonal difference");
             int switchNo;
             switchNo = Convert.ToInt32(Console.ReadLine()) ;
             // Problems.simpleArraySum();
@@ -48,6 +50,9 @@ namespace problemSolving{
                     break;
                 case 3:
                     Problems.aVeryBigsum();
+                    break;
+                case 4:
+                    Problems.diagonalDifference();
                     break;
                 default:
                     break;

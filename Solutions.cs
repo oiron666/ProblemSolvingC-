@@ -14,6 +14,7 @@ using System;
 
 
 
+
 namespace problemSolving{
 
     public class Solutions
@@ -22,9 +23,7 @@ namespace problemSolving{
 
         public static int simpleArraySum(int[] ar) 
         {
-        /*
-         * Write your code here.
-         */
+
         int a = 0;
         foreach (int i in ar)
         {
@@ -63,6 +62,24 @@ namespace problemSolving{
             a += i;
             }
             return a;
+        }
+
+        public static int diagonalDifference(List<List<int>> arr)
+        {
+            int scoreLeft = 0;
+            int scoreRight = 0;
+            int i = 0;
+            int rightCounter = arr.Count - 1;
+            int totalScore;
+            for ( i = 0; i < arr.Count; i++)
+            {
+                scoreLeft += arr[i][i];
+                scoreRight += arr[i][rightCounter];
+                rightCounter --;
+
+            }
+            totalScore = Math.Abs(scoreLeft - scoreRight);
+            return totalScore;
         }
     
     }

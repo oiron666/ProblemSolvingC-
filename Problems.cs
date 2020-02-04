@@ -24,7 +24,8 @@ namespace problemSolving
             List<int> b = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(bTemp => Convert.ToInt32(bTemp)).ToList();
 
             List<int> result = Solutions.compareTriplets(a, b);
-            System.Console.WriteLine("The first score is {0) and the second is {1}",result[0], result[1]);
+            System.Console.WriteLine(result[0]);
+            System.Console.WriteLine(result[1]);
             return result;
         }
 
@@ -34,8 +35,28 @@ namespace problemSolving
             long result = Solutions.aVeryBigSum(ar);
             System.Console.WriteLine(result);
             return result;
-            
+
         }
+
+         public static int diagonalDifference(){
+            
+            int n = Convert.ToInt32(Console.ReadLine().Trim());
+
+            List<List<int>> arr = new List<List<int>>();
+
+            for (int i = 0; i < n; i++)
+            {
+                arr.Add(Console.ReadLine().TrimEnd().Split(' ').ToList().Select(arrTemp => Convert.ToInt32(arrTemp)).ToList());
+            }
+
+            int result = Solutions.diagonalDifference(arr);
+            //System.Console.WriteLine(arr.Count);
+            System.Console.WriteLine(result);
+            return result;
+
+
+         }
+
         
     }
 }
