@@ -57,6 +57,19 @@ namespace problemSolving
 
          }
 
-        
+        public static void plusMinus(){
+      
+            int n = Convert.ToInt32(Console.ReadLine());
+            int[] arr = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp));
+            Solutions.plusMinus(arr);
+
+        }
+
+        public static void staircase() {
+        int n = Convert.ToInt32(Console.ReadLine());
+        Solutions.staircase(n);
+        }
+
+
     }
 }

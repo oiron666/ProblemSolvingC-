@@ -81,6 +81,47 @@ namespace problemSolving{
             totalScore = Math.Abs(scoreLeft - scoreRight);
             return totalScore;
         }
-    
+
+        public static void plusMinus(int[] arr){
+            double denominator = arr.Count();
+            double positiveCounter = 0;
+            double negativeCounter = 0;
+            double zeroCounter = 0;
+            foreach (int i in arr){
+                if(i > 0)
+                {
+                    positiveCounter ++;
+                }
+                else if (i < 0)
+                {
+                    negativeCounter ++;
+                }
+                else
+                {
+                    zeroCounter ++;
+                }
+            }
+            double result;
+            result = Math.Round((positiveCounter)/(denominator), 6);   
+            double resultPostive = result;
+            result =  Math.Round((negativeCounter)/(denominator), 6);
+            double resultNegative = result;
+            result = Math.Round((zeroCounter)/(denominator), 6);
+            double resultZero = result;
+            System.Console.WriteLine(resultPostive);
+            System.Console.WriteLine(resultNegative);
+            System.Console.WriteLine(resultZero);
+        }
+
+        public static void staircase(int n) {
+            int i = 1;
+            for (i = 1; i <= n; i++ )
+            {
+                string space = String.Concat(Enumerable.Repeat(" ", n - i));
+                string sharp = String.Concat(Enumerable.Repeat("#", i));
+                System.Console.WriteLine(String.Concat(space, sharp));
+            } 
+
+        }
     }
 }

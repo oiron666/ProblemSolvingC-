@@ -36,7 +36,7 @@ namespace problemSolving{
 
 
 
-            System.Console.WriteLine("choose problem to solve \n1. simpleArraySum \n2. compareTriplets \n3. aVeryBigsum \n4. Diagonal difference");
+            System.Console.WriteLine("choose problem to solve \n1. simpleArraySum \n2. compareTriplets \n3. aVeryBigsum \n4. Diagonal difference \n5. Plus Minus\n6. Staircase");
             int switchNo;
             switchNo = Convert.ToInt32(Console.ReadLine()) ;
             // Problems.simpleArraySum();
@@ -54,10 +54,14 @@ namespace problemSolving{
                 case 4:
                     Problems.diagonalDifference();
                     break;
+                case 5:
+                    Problems.plusMinus();
+                    break;
+                case 6:
+                    Problems.staircase();
+                    break;
                 default:
                     break;
-
-                
             }
 
         }
