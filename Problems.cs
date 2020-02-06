@@ -8,7 +8,8 @@ namespace problemSolving
 {
     public class Problems
     {
-        public static int simpleArraySum() {
+        public static int simpleArraySum() 
+        {
             
             // int arCount = Convert.ToInt32(Console.ReadLine());
             System.Console.WriteLine("Type numbers to sum up delimit them by spaces");
@@ -18,7 +19,8 @@ namespace problemSolving
             return 1;
         }
 
-        public static List<int>  compareTriplets() {
+        public static List<int>  compareTriplets() 
+        {
 
             List<int> a = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(aTemp => Convert.ToInt32(aTemp)).ToList();
             List<int> b = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(bTemp => Convert.ToInt32(bTemp)).ToList();
@@ -29,7 +31,8 @@ namespace problemSolving
             return result;
         }
 
-        public static long aVeryBigsum() {
+        public static long aVeryBigsum() 
+        {
 
             long[] ar = Array.ConvertAll(Console.ReadLine().Split(' '), arTemp => Convert.ToInt64(arTemp));
             long result = Solutions.aVeryBigSum(ar);
@@ -38,7 +41,8 @@ namespace problemSolving
 
         }
 
-         public static int diagonalDifference(){
+         public static int diagonalDifference()
+         {
             
             int n = Convert.ToInt32(Console.ReadLine().Trim());
 
@@ -54,10 +58,10 @@ namespace problemSolving
             System.Console.WriteLine(result);
             return result;
 
-
          }
 
-        public static void plusMinus(){
+        public static void plusMinus()
+        {
       
             int n = Convert.ToInt32(Console.ReadLine());
             int[] arr = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp));
@@ -65,11 +69,39 @@ namespace problemSolving
 
         }
 
-        public static void staircase() {
-        int n = Convert.ToInt32(Console.ReadLine());
-        Solutions.staircase(n);
+        public static void staircase() 
+        {
+
+            int n = Convert.ToInt32(Console.ReadLine());
+            Solutions.staircase(n);
+
         }
 
+        public static void miniMaxSum() 
+        {
 
+            int[] arr = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp));
+            Solutions.miniMaxSum(arr);
+
+        }
+
+        public static void birthdayCakeCandles()
+        {
+
+            int arCount = Convert.ToInt32(Console.ReadLine());
+            int[] ar = Array.ConvertAll(Console.ReadLine().Split(' '), arTemp => Convert.ToInt32(arTemp));
+            int result = Solutions.birthdayCakeCandles(ar);
+            System.Console.WriteLine(result);
+
+        }
+
+        public static void timeConversion()
+        {
+
+            string s = Console.ReadLine();
+            string result = Solutions.timeConversion(s);
+            System.Console.WriteLine(result);
+
+        }
     }
 }
