@@ -103,5 +103,33 @@ namespace problemSolving
             System.Console.WriteLine(result);
 
         }
+
+        public static void reducedStrings()
+        {
+
+            string s = Console.ReadLine();
+            string result = Solutions.superReducedString(s);
+            System.Console.WriteLine(result);
+
+        }
+
+        
+        public static void gradingStudents()
+        {
+
+            int gradesCount = Convert.ToInt32(Console.ReadLine().Trim());
+
+            List<int> grades = new List<int>();
+
+            for (int i = 0; i < gradesCount; i++)
+            {
+                int gradesItem = Convert.ToInt32(Console.ReadLine().Trim());
+                grades.Add(gradesItem);
+            }
+
+            List<int> result = Solutions.gradingStudents(grades);
+
+        }
+        
     }
 }

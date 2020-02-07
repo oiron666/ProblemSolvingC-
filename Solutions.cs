@@ -183,5 +183,61 @@ namespace problemSolving{
 
         }
 
+        public static string superReducedString(string s) 
+        {
+            var reducedString = s;
+            bool test = true;
+            string output = reducedString;  
+            while (test == true)
+            {
+                int stringLength = reducedString.Length;
+                if (stringLength > 2)
+                {
+                    int i = 0;
+                    for (i = 0; i < stringLength; i++)
+                    {
+                        if (i == stringLength - 1)
+                        {
+                            test = false;
+                            break;
+                        }
+
+                        string s1 = reducedString.Substring(i,1);
+
+                        string s2 = reducedString.Substring(i+1,1);
+                        if (s1 == s2)
+                        {
+                            reducedString = reducedString.Remove(i, 2);
+                            //reducedString = reducedString.Remove(i + 1, 1);
+                            output = reducedString;
+                            //System.Console.WriteLine(output);
+                            stringLength = reducedString.Length;
+                            test = true;
+                            break;
+                        }
+                    }
+                }
+                else if ((stringLength == 2 &&  reducedString.Substring(0,1) == reducedString.Substring(1,1)) ||  stringLength == 1 )
+                {
+                    output = "Empty String";
+                    test = false;
+                    break;
+                }
+                else
+                {
+                    output = reducedString;
+                    test = false;
+                    break;
+                }    
+            }
+            return output;       
+        }
+
+        public static List<int> gradingStudents(List<int> grades)
+        {
+            List<int>  output =  new List<int>();
+            return output;
+        }
+
     }
 }

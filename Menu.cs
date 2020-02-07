@@ -32,6 +32,7 @@ namespace problemSolving
                     Menu.DataStructures();
                     break;
                 default:
+                    Menu.MainMenu();
                     break;
 
             }
@@ -39,7 +40,7 @@ namespace problemSolving
 
         public static void Algorithms()
         {
-            System.Console.WriteLine("Choose Subbomain of problems to solve 1. WarmUp \n2. Implementation\n3. Strings");
+            System.Console.WriteLine("ALGORITHMS DOMAIN\nChoose Subbomain of problems to solve\n1. WarmUp \n2. Implementation \n3. Strings");
             int switchNo;
             switchNo = Convert.ToInt32(Console.ReadLine()) ;
             // Problems.simpleArraySum();
@@ -48,7 +49,10 @@ namespace problemSolving
                 case 1:
                     Menu.WarmUp();
                     break;
-                case 2:
+                 case 2:
+                    Menu.Implementation();
+                    break;                   
+                case 3:
                     Menu.Strings();
                     break;
                 default:
@@ -60,7 +64,7 @@ namespace problemSolving
         public static void DataStructures()
         {
 
-            System.Console.WriteLine("Nothing to do here press any key to go back to main menu!");
+            System.Console.WriteLine("DATA STRUCTURES DOMAIN\nNothing to do here press any key to go back to main menu!");
             int switchNo;
             switchNo = Convert.ToInt32(Console.ReadLine()) ;
             // Problems.simpleArraySum();
@@ -116,17 +120,33 @@ namespace problemSolving
                     break;
             }
         }
-
-        public static void Strings()
+        public static void Implementation()
         {
-            System.Console.WriteLine("STRING SUBDOMAIN\nchoose problem to solve/press any key to go back  ");
+            System.Console.WriteLine("Implementation SUBDOMAIN\nchoose problem to solve/press any key to go back\n 1. Grading studetns");
             int switchNo;
             switchNo = Convert.ToInt32(Console.ReadLine()) ;
             // Problems.simpleArraySum();
             switch (switchNo)
             {
                 case 1:
+                    Problems.gradingStudents();
+                    break;
+                    default:
                     Menu.Algorithms();
+                    break;
+
+            }
+        }
+        public static void Strings()
+        {
+            System.Console.WriteLine("STRING SUBDOMAIN\nchoose problem to solve/press any key to go back\n 1. Super reduced strings");
+            int switchNo;
+            switchNo = Convert.ToInt32(Console.ReadLine()) ;
+            // Problems.simpleArraySum();
+            switch (switchNo)
+            {
+                case 1:
+                    Problems.reducedStrings();
                     break;
                     default:
                     Menu.Algorithms();
