@@ -235,9 +235,32 @@ namespace problemSolving{
 
         public static List<int> gradingStudents(List<int> grades)
         {
-            List<int>  output =  new List<int>();
-            return output;
+            List<int>  finalGrades =  new List<int>();           
+            int i = 0;
+            for (i = 0; i < grades.Count; i++)
+            {
+                if (grades[i] < 38)
+                {
+                    finalGrades.Add(grades[i]);
+                }
+                else if (grades[i] % 5 > 2)
+                {
+                    finalGrades.Add((grades[i] - (grades[i] % 5)) + 5);
+                }
+                else
+                {
+                    finalGrades.Add(grades[i]);
+                }
+            }
+            return finalGrades;
         }
+
+        public static void countApplesAndOranges(int s, int t, int a, int b, int[] apples, int[] oranges) 
+        {
+
+
+        }
+
 
     }
 }
