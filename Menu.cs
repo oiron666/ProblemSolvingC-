@@ -19,7 +19,7 @@ namespace problemSolving
         public static void MainMenu()
         {
 
-            System.Console.WriteLine("Choose Domain of problems to solve (only 1 at this moment!) 1. Algorithms \n2.Data Structures (so far empty!)");
+            System.Console.WriteLine("Choose Domain of problems to solve (only 1 at this moment!)\n1. Algorithms \n2.Data Structures (so far empty!)");
             int switchNo;
             switchNo = Convert.ToInt32(Console.ReadLine()) ;
 
@@ -40,7 +40,7 @@ namespace problemSolving
 
         public static void Algorithms()
         {
-            System.Console.WriteLine("ALGORITHMS DOMAIN\nChoose Subbomain of problems to solve\n1. WarmUp \n2. Implementation \n3. Strings");
+            System.Console.WriteLine("ALGORITHMS DOMAIN\nChoose Subbomain of problems to solve\n1. WarmUp \n2. Implementation \n3. Strings\n4. Sorting");
             int switchNo;
             switchNo = Convert.ToInt32(Console.ReadLine()) ;
             // Problems.simpleArraySum();
@@ -54,6 +54,9 @@ namespace problemSolving
                     break;                   
                 case 3:
                     Menu.Strings();
+                    break;
+                case 4:
+                    Menu.Sorting();
                     break;
                 default:
                     Menu.MainMenu();
@@ -89,31 +92,31 @@ namespace problemSolving
             switch (switchNo)
             {
                 case 1:
-                    Problems.simpleArraySum();
+                    WarmUpProblems.simpleArraySum();
                     break;
                 case 2:
-                    Problems.compareTriplets();
+                    WarmUpProblems.compareTriplets();
                     break;
                 case 3:
-                    Problems.aVeryBigsum();
+                    WarmUpProblems.aVeryBigsum();
                     break;
                 case 4:
-                    Problems.diagonalDifference();
+                    WarmUpProblems.diagonalDifference();
                     break;
                 case 5:
-                    Problems.plusMinus();
+                    WarmUpProblems.plusMinus();
                     break;
                 case 6:
-                    Problems.staircase();
+                    WarmUpProblems.staircase();
                     break;
                 case 7:
-                    Problems.miniMaxSum();
+                    WarmUpProblems.miniMaxSum();
                     break;
                 case 8:
-                    Problems.birthdayCakeCandles();
+                    WarmUpProblems.birthdayCakeCandles();
                     break;
                 case 9:
-                    Problems.timeConversion();
+                    WarmUpProblems.timeConversion();
                     break;
                 default:
                     Menu.Algorithms();
@@ -122,36 +125,93 @@ namespace problemSolving
         }
         public static void Implementation()
         {
-            System.Console.WriteLine("Implementation SUBDOMAIN\nchoose problem to solve/press any key to go back\n 1. Grading studetns");
+            System.Console.WriteLine("Implementation SUBDOMAIN\nchoose problem to solve/press any key to go back\n1. Grading studetns\n2. Apple nad orange\n3. Kangaroo\n4. Between two sets\n5. Breaking records\n6 Birthday\n7. Divisible sum pairs\n8. Migratory birds\n9. day of the programmer\n10 Bon appetit\n11 Sock merchant");
             int switchNo;
             switchNo = Convert.ToInt32(Console.ReadLine()) ;
             // Problems.simpleArraySum();
             switch (switchNo)
             {
                 case 1:
-                    Problems.gradingStudents();
+                    ImplementationProblems.gradingStudents();
                     break;
-                    default:
+                case 2:
+                    ImplementationProblems.countApplesAndOranges();
+                    break;
+                case 3:
+                    ImplementationProblems.kangaroo();
+                    break;
+                case 4:
+                    ImplementationProblems.betweenTwoSets();
+                    break;
+                case 5:
+                    ImplementationProblems.breakingRecords();
+                    break;
+                case 6:
+                    ImplementationProblems.birthday();
+                    break;
+                case 7:
+                    ImplementationProblems.divisibleSumPairs();
+                    break;
+                case 8:
+                    ImplementationProblems.migratoryBirds();
+                    break; 
+                case 9:
+                    ImplementationProblems.dayOfProgrammer();
+                    break;
+                case 10:
+                    ImplementationProblems.bonAppetit();
+                    break; 
+                case 11:
+                    ImplementationProblems.sockMerchant();
+                    break;   
+                case 12:
+                    ImplementationProblems.pageCount();
+                    break;                                                                                                                                             
+                default:
                     Menu.Algorithms();
                     break;
-
             }
         }
         public static void Strings()
         {
-            System.Console.WriteLine("STRING SUBDOMAIN\nchoose problem to solve/press any key to go back\n 1. Super reduced strings");
+            System.Console.WriteLine("STRING SUBDOMAIN\nchoose problem to solve/press any key to go back\n1. Super reduced strings\n2. Camel case\n3. Password strength (minimum number)\n4. Two characters");
             int switchNo;
             switchNo = Convert.ToInt32(Console.ReadLine()) ;
             // Problems.simpleArraySum();
             switch (switchNo)
             {
                 case 1:
-                    Problems.reducedStrings();
+                    StringProblems.reducedStrings();
                     break;
-                    default:
+                case 2:
+                    StringProblems.camelcase();
+                    break;
+                case 3:
+                    StringProblems.minimumNumber();
+                    break;
+                case 4:
+                    StringProblems.alternate();
+                    break;                    
+                default:
                     Menu.Algorithms();
                     break;
+            }
+        }
 
+        public static void Sorting()
+        {
+            System.Console.WriteLine("SORTING SUBDOMAIN\nchoose problem to solve/press any key to go back\n1. Tutorial intro\n");
+            int switchNo;
+            switchNo = Convert.ToInt32(Console.ReadLine()) ;
+            // Problems.simpleArraySum();
+            switch (switchNo)
+            {
+                case 1:
+                    SortingProblems.introTutorial();
+                    break;
+                default:
+                    Menu.Algorithms();
+                    break;
             }
         }
     }
