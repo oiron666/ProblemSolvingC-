@@ -1,4 +1,4 @@
-using System.CodeDom.Compiler;
+  using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Collections;
 using System.ComponentModel;
@@ -125,7 +125,7 @@ namespace problemSolving
         }
         public static void Implementation()
         {
-            System.Console.WriteLine("Implementation SUBDOMAIN\nchoose problem to solve/press any key to go back\n1. Grading studetns\n2. Apple nad orange\n3. Kangaroo\n4. Between two sets\n5. Breaking records\n6 Birthday\n7. Divisible sum pairs\n8. Migratory birds\n9. day of the programmer\n10 Bon appetit\n11 Sock merchant");
+            System.Console.WriteLine("Implementation SUBDOMAIN\nchoose problem to solve/press any key to go back\n1. Grading studetns\n2. Apple nad orange\n3. Kangaroo\n4. Between two sets\n5. Breaking records\n6 Birthday\n7. Divisible sum pairs\n8. Migratory birds\n9. day of the programmer\n10 Bon appetit\n11. Sock merchant\n 12. Page count ");
             int switchNo;
             switchNo = Convert.ToInt32(Console.ReadLine()) ;
             // Problems.simpleArraySum();
@@ -174,7 +174,7 @@ namespace problemSolving
         }
         public static void Strings()
         {
-            System.Console.WriteLine("STRING SUBDOMAIN\nchoose problem to solve/press any key to go back\n1. Super reduced strings\n2. Camel case\n3. Password strength (minimum number)\n4. Two characters");
+            System.Console.WriteLine("STRING SUBDOMAIN\nchoose problem to solve/press any key to go back\n1. Super reduced strings\n2. Camel case\n3. Password strength (minimum number)\n4. Two characters\n5. Cesear cipher");
             int switchNo;
             switchNo = Convert.ToInt32(Console.ReadLine()) ;
             // Problems.simpleArraySum();
@@ -191,7 +191,10 @@ namespace problemSolving
                     break;
                 case 4:
                     StringProblems.alternate();
-                    break;                    
+                    break;
+                case 5:
+                    StringProblems.caesarCipher();
+                    break;
                 default:
                     Menu.Algorithms();
                     break;

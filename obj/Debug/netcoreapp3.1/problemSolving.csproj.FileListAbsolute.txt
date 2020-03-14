@@ -9,3 +9,14 @@ C:\Users\mbie\Documents\C#\problemSolving\obj\Debug\netcoreapp3.1\problemSolving
 C:\Users\mbie\Documents\C#\problemSolving\obj\Debug\netcoreapp3.1\problemSolving.AssemblyInfo.cs
 C:\Users\mbie\Documents\C#\problemSolving\obj\Debug\netcoreapp3.1\problemSolving.dll
 C:\Users\mbie\Documents\C#\problemSolving\obj\Debug\netcoreapp3.1\problemSolving.pdb
+C:\Users\Marcin\Documents\ProblemSolving\ProblemSolvingC-\bin\Debug\netcoreapp3.1\problemSolving.exe
+C:\Users\Marcin\Documents\ProblemSolving\ProblemSolvingC-\bin\Debug\netcoreapp3.1\problemSolving.deps.json
+C:\Users\Marcin\Documents\ProblemSolving\ProblemSolvingC-\bin\Debug\netcoreapp3.1\problemSolving.runtimeconfig.json
+C:\Users\Marcin\Documents\ProblemSolving\ProblemSolvingC-\bin\Debug\netcoreapp3.1\problemSolving.runtimeconfig.dev.json
+C:\Users\Marcin\Documents\ProblemSolving\ProblemSolvingC-\bin\Debug\netcoreapp3.1\problemSolving.dll
+C:\Users\Marcin\Documents\ProblemSolving\ProblemSolvingC-\bin\Debug\netcoreapp3.1\problemSolving.pdb
+C:\Users\Marcin\Documents\ProblemSolving\ProblemSolvingC-\obj\Debug\netcoreapp3.1\problemSolving.csprojAssemblyReference.cache
+C:\Users\Marcin\Documents\ProblemSolving\ProblemSolvingC-\obj\Debug\netcoreapp3.1\problemSolving.AssemblyInfoInputs.cache
+C:\Users\Marcin\Documents\ProblemSolving\ProblemSolvingC-\obj\Debug\netcoreapp3.1\problemSolving.AssemblyInfo.cs
+C:\Users\Marcin\Documents\ProblemSolving\ProblemSolvingC-\obj\Debug\netcoreapp3.1\problemSolving.dll
+C:\Users\Marcin\Documents\ProblemSolving\ProblemSolvingC-\obj\Debug\netcoreapp3.1\problemSolving.pdb

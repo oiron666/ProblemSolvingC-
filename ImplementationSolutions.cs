@@ -293,7 +293,28 @@ namespace problemSolving
 
         public static int   pageCount(int n, int p) 
         {
-            return 42;
+            int halfNo = n / 2;
+            int pageTurns;
+            bool lastPageFlag = false; 
+
+            if(n-1 == p)
+            {
+                lastPageFlag = true;
+            }
+
+            if (p <= halfNo)
+            {
+                pageTurns = p / 2;
+            }
+            else if (lastPageFlag == true && n%2 == 0 )
+            {
+                pageTurns = 1;
+            }
+            else
+            {
+                pageTurns = (n - p)  / 2;
+            }
+            return pageTurns;
         }   
     }
 }

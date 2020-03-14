@@ -56,7 +56,18 @@ namespace problemSolving
 
         }
 
+        public static void caesarCipher()
+        {
+            int n = Convert.ToInt32(Console.ReadLine());
 
+            string s = Console.ReadLine();
+
+            int k = Convert.ToInt32(Console.ReadLine());
+
+            string result = StringSolutions.caesarCipher(s, k);
+
+            Console.WriteLine(result);
+        }
 
 
     }

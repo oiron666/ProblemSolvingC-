@@ -237,5 +237,54 @@ namespace problemSolving
             return output;
         }
 
+        public static string caesarCipher(string s, int k)
+        {
+            int i;
+            List<char> charList = new List<char>();
+            charList.AddRange(s);
+            int lowerRangeLC = 65;
+            int upperRangeLC = 90;
+            int lowerRangeUC = 97;
+            int upperRangeUC = 122;
+            string output = "";
+            for (i = 0; i < charList.Count; i++)
+            {
+                int numAscii = (int)charList[i];
+                int shiftedNum = 0;
+                char shiftedChar;
+
+                if ((numAscii >= lowerRangeLC && numAscii <= upperRangeLC) || (numAscii >= lowerRangeUC && numAscii <= upperRangeUC))
+                {
+                    shiftedNum = numAscii + k;
+                    
+                    if (shiftedNum > upperRangeLC && numAscii < lowerRangeUC)
+                    {
+                        shiftedNum = lowerRangeLC + (k - (upperRangeLC - numAscii)) -1;
+                        while (shiftedNum > upperRangeLC)
+                        {
+                            shiftedNum = lowerRangeLC + (shiftedNum - upperRangeLC)-1; 
+                        }
+                    }
+                    else if (shiftedNum > upperRangeUC)
+                    {
+                        shiftedNum = lowerRangeUC + (k - (upperRangeUC - numAscii)) -1;
+                        while (shiftedNum > upperRangeUC)
+                        {
+                            shiftedNum = lowerRangeUC + (shiftedNum - upperRangeUC)-1;
+                        }
+
+                    }
+                    shiftedChar = (char)shiftedNum;
+                }
+                else
+                {
+                    shiftedChar = charList[i];
+                }
+                output = String.Concat(output, shiftedChar);
+                
+            }
+            return output;
+        }
+
     }
 }
