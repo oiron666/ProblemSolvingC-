@@ -193,15 +193,15 @@ namespace problemSolving
 
         public static void electronicShop()
         {
+            Console.Clear();
             string text1 = "A person wants to determine the most expensive computer keyboard and USB drive that can be purchased with a give budget. ";
-            string text2 = "Type budget:";
+            string text2 = "Type budget and number of keyboards and USB drivers splitted by space:";
             Console.WriteLine(text1);
             Console.WriteLine(text2);
 
-
-            string[] bnm = Console.ReadLine().Split(' ');
+            int[] bnm = Tools.getArrayInt(3," ",0, 100000);
            
-            int b = Convert.ToInt32(bnm[0]);
+            int b = bnm[0];
 
             /*
             int n = Convert.ToInt32(bnm[1]);
@@ -211,16 +211,26 @@ namespace problemSolving
 
             string text3 = "Type keyboard prices splited by spaces:";
             Console.WriteLine(text3);
-            int[] keyboards = Array.ConvertAll(Console.ReadLine().Split(' '), keyboardsTemp => Convert.ToInt32(keyboardsTemp));
+            int[] keyboards = Tools.getArrayInt(bnm[1], " ", 0, 1000000);
 
             string text4 = "Type USB prices splited by spaces:";
             Console.WriteLine(text4);
-            int[] drives = Array.ConvertAll(Console.ReadLine().Split(' '), drivesTemp => Convert.ToInt32(drivesTemp));
+            int[] drives = Tools.getArrayInt(bnm[2], " ", 0, 1000000);
             /*
              * The maximum amount of money she can spend on a keyboard and USB drive, or -1 if she can't purchase both items
              */
             int moneySpent = ImplementationSolutions.electronicShop(b, keyboards, drives);
             /* int moneySpent = getMoneySpent(keyboards, drives, b); */
+            if (moneySpent > -1)
+            {
+                Console.WriteLine("The highest sum is " + moneySpent);
+            }
+            else
+            {
+                Console.WriteLine("There is no valid price combination");
+            }
+            Console.WriteLine("\nPress any key to continue");
+            Console.ReadKey();
         }
         
     }

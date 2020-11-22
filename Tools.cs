@@ -72,5 +72,68 @@ namespace problemSolving
 
         }
 
+
+        public static int[] getArrayInt(int Length, string splitChar, int minValue, int maxValue)
+        {
+            int[] arrayInt;
+
+            while (true)
+            {
+                bool arrayLengthValidator = false;
+                bool arrayValueValidator = true;
+                try
+                {
+                    arrayInt = Array.ConvertAll(Console.ReadLine().Split(' ') , arrayTemp => Convert.ToInt32(arrayTemp));
+                    //arrayInt = Console.ReadLine().TrimEnd().Split(splitChar).ToList().Select(aTemp => Convert.ToInt32(aTemp)).ToList();
+                    if (Length > 0)
+                    {
+                        if (arrayInt.Length > Length)
+                        {
+                            Console.WriteLine("List is too long! List must contain {0} elements", Length);
+                        }
+                        else if (arrayInt.Length < Length)
+                        {
+                            Console.WriteLine("List is too short! List must contain {0} elements", Length);
+                        }
+                        else
+                        {
+                            arrayLengthValidator = true;
+                        }
+                    }
+                    else
+                    {
+                        arrayLengthValidator = true;
+                    }
+                   
+                    foreach (int i in arrayInt)
+                    {
+                        if (i < minValue)
+                        {
+                            Console.WriteLine("{0} is too small value! Minimum acceptable value is {1}", i, minValue);
+                            arrayValueValidator = false;
+                        }
+                        else if (i > maxValue)
+                        {
+                            Console.WriteLine("{0} is too big value! Maximum acceptable value is {1}", i, maxValue);
+                            arrayValueValidator = false;
+                        }
+                    }
+                    if (arrayLengthValidator == true && arrayValueValidator == true)
+                    {
+                        break;
+                    }
+
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Write integer numbers only");
+                    Console.WriteLine("Press any key to continue");
+                    Console.ReadKey();
+                }
+            }
+
+            return arrayInt;
+
+        }
     }
 }

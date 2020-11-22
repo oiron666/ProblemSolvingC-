@@ -148,7 +148,8 @@ namespace problemSolving
                 "9. day of the programmer\n" +
                 "10 Bon appetit\n" +
                 "11. Sock merchant\n" +
-                "12. Page count ");
+                "12. Page count \n" +
+                "13. Electronic shop");
 
             string switchValue = Console.ReadLine();
 
@@ -191,7 +192,10 @@ namespace problemSolving
                     break;   
                 case 12:
                     ImplementationProblems.pageCount();
-                    break;                                                                                                                                             
+                    break;
+                case 13:
+                    ImplementationProblems.electronicShop();
+                    break;
                 default:
                     Menu.Algorithms();
                     break;

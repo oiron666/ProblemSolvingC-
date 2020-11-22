@@ -319,7 +319,21 @@ namespace problemSolving
 
         public static int electronicShop(int b, int[] keyboards, int[] drives)
         {
-            return -1;
+            int output = -1;
+            int sum; 
+            foreach (int i in keyboards)
+            {
+                foreach(int j in drives)
+                {
+                    sum = i + j;
+                    if(sum <= b && sum > output)
+                    {
+                        Console.WriteLine("Keyboard {0} and drive {1} is the most expensive combination now",i,j);
+                        output = sum;
+                    }
+                }
+            }
+            return output;
         }
     }
 }
