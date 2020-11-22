@@ -77,7 +77,7 @@ namespace problemSolving
 
             string result = ImplementationSolutions.kangaroo(x1, v1, x2, v2);
 
-            System.Console.WriteLine(result);           
+            System.Console.WriteLine(result);
         }
 
         public static void betweenTwoSets()
@@ -93,7 +93,7 @@ namespace problemSolving
             List<int> brr = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(brrTemp => Convert.ToInt32(brrTemp)).ToList();
 
             int total = ImplementationSolutions.betweenTwoSets(arr, brr);
-            
+
             System.Console.WriteLine(total);
         }
 
@@ -105,7 +105,7 @@ namespace problemSolving
             System.Console.WriteLine(string.Join(" ", result));
         }
 
-        public static void birthday() 
+        public static void birthday()
         {
 
             int n = Convert.ToInt32(Console.ReadLine().Trim());
@@ -127,20 +127,20 @@ namespace problemSolving
             System.Console.WriteLine(result);
 
         }
-        
-        public static void migratoryBirds() 
+
+        public static void migratoryBirds()
         {
             int arrCount = Convert.ToInt32(Console.ReadLine().Trim());
             List<int> arr = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(arrTemp => Convert.ToInt32(arrTemp)).ToList();
 
             int result = ImplementationSolutions.migratoryBirds(arr);
-            
+
             System.Console.WriteLine(result);
 
         }
 
 
-        public static void dayOfProgrammer() 
+        public static void dayOfProgrammer()
         {
 
             int year = Convert.ToInt32(Console.ReadLine().Trim());
@@ -151,7 +151,7 @@ namespace problemSolving
 
         }
 
-        public static void bonAppetit() 
+        public static void bonAppetit()
         {
             string[] nk = Console.ReadLine().TrimEnd().Split(' ');
 
@@ -167,7 +167,7 @@ namespace problemSolving
 
 
         }
-        public static void sockMerchant() 
+        public static void sockMerchant()
         {
 
 
@@ -179,7 +179,7 @@ namespace problemSolving
             Console.WriteLine(result);
         }
 
-        public static void pageCount() 
+        public static void pageCount()
         {
             int n = Convert.ToInt32(Console.ReadLine());
 
@@ -190,5 +190,38 @@ namespace problemSolving
             System.Console.WriteLine(result);
         }
 
+
+        public static void electronicShop()
+        {
+            string text1 = "A person wants to determine the most expensive computer keyboard and USB drive that can be purchased with a give budget. ";
+            string text2 = "Type budget:";
+            Console.WriteLine(text1);
+            Console.WriteLine(text2);
+
+
+            string[] bnm = Console.ReadLine().Split(' ');
+           
+            int b = Convert.ToInt32(bnm[0]);
+
+            /*
+            int n = Convert.ToInt32(bnm[1]);
+
+            int m = Convert.ToInt32(bnm[2]);
+            */
+
+            string text3 = "Type keyboard prices splited by spaces:";
+            Console.WriteLine(text3);
+            int[] keyboards = Array.ConvertAll(Console.ReadLine().Split(' '), keyboardsTemp => Convert.ToInt32(keyboardsTemp));
+
+            string text4 = "Type USB prices splited by spaces:";
+            Console.WriteLine(text4);
+            int[] drives = Array.ConvertAll(Console.ReadLine().Split(' '), drivesTemp => Convert.ToInt32(drivesTemp));
+            /*
+             * The maximum amount of money she can spend on a keyboard and USB drive, or -1 if she can't purchase both items
+             */
+            int moneySpent = ImplementationSolutions.electronicShop(b, keyboards, drives);
+            /* int moneySpent = getMoneySpent(keyboards, drives, b); */
+        }
+        
     }
 }

@@ -316,5 +316,10 @@ namespace problemSolving
             }
             return pageTurns;
         }   
+
+        public static int electronicShop(int b, int[] keyboards, int[] drives)
+        {
+            return -1;
+        }
     }
 }

@@ -38,10 +38,13 @@ namespace problemSolving
                 if (a[i] > b[i])
                 {
                     scoreA++;
+                    Console.WriteLine(String.Format("{0} is bigger than {1}. A scores a point", a[i], b[i]));
+
                 }
                 else if (a[i] < b[i])
                 {
                     scoreB++;
+                    Console.WriteLine(String.Format("{0} is smaller than {1}. B scores a point", a[i], b[i]));
                 }
             }
             List<int>  resultArray =  new List<int>() { scoreA,scoreB};

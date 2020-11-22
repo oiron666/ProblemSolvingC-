@@ -17,26 +17,61 @@ namespace problemSolving
 {
     public class WarmUpProblems
     {
-                public static int simpleArraySum() 
+
+        public static int simpleArraySum()
         {
-            
+            Console.Clear();
+            string description = "Given an array of integers, find the sum of its elements";
+            string description2 = "For example, if the array ar = [1,2,3] 1 + 2 + 3 so return 6";
+            Console.WriteLine(description);
+            Console.WriteLine(description2);
             // int arCount = Convert.ToInt32(Console.ReadLine());
             System.Console.WriteLine("Type numbers to sum up delimit them by spaces");
-            int[] ar = Array.ConvertAll(Console.ReadLine().Split(' '), arTemp => Convert.ToInt32(arTemp));
-            int result = WarmUpSolutions.simpleArraySum(ar);
-            System.Console.WriteLine(result);
+            int[] ar;
+
+            try
+            {
+                ar = Array.ConvertAll(Console.ReadLine().Split(' '), arTemp => Convert.ToInt32(arTemp));
+                int result = WarmUpSolutions.simpleArraySum(ar);
+                System.Console.WriteLine("The result of sum is " + result);
+                Console.WriteLine("\nPress any key to continue");
+                Console.ReadKey();
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("\nWrite number correctly \nPress any key to continue");
+                Console.ReadKey();
+                simpleArraySum();
+            }
             return 1;
+
         }
 
         public static List<int>  compareTriplets() 
         {
-
-            List<int> a = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(aTemp => Convert.ToInt32(aTemp)).ToList();
-            List<int> b = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(bTemp => Convert.ToInt32(bTemp)).ToList();
+            Console.Clear();
+            Console.WriteLine("The task is to find comparison points by comparing a[0] with b[0], a[1] with b[1], and a[2] with b[2].");
+            Console.WriteLine("If a[i] > b[i], then A is awarded 1 point.");
+            Console.WriteLine("If a[i] < b[i], then B is awarded 1 point. ");
+            Console.WriteLine("If a[i] = b[i], then neither person receives a point.");
+            //List<int> a = new List<int>() {} ;
+            //List<int> b = new List<int>() {};
+            List<int> a = Tools.getListInt(3, " ", 0, 1000000);
+            List<int> b = Tools.getListInt(3, " ", 0, 1000000);
 
             List<int> result = WarmUpSolutions.compareTriplets(a, b);
-            System.Console.WriteLine(result[0]);
-            System.Console.WriteLine(result[1]);
+            Console.WriteLine("A scored {0} points", result[0]);
+            Console.WriteLine("B scored {0} points", result[1]);
+            if (result[0] > result[1])
+                Console.WriteLine("A won");
+            else if (result[0] < result[1])
+                Console.WriteLine("B won");
+            else
+                Console.WriteLine("It's a draw");
+
+
+            Console.WriteLine("\nPress any key to go to Main Menu");
+            Console.ReadKey();
             return result;
         }
 

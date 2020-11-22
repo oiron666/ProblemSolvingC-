@@ -18,11 +18,10 @@ namespace problemSolving
     {
         public static void MainMenu()
         {
-
-            System.Console.WriteLine("Choose Domain of problems to solve (only 1 at this moment!)\n1. Algorithms \n2.Data Structures (so far empty!)");
-            int switchNo;
-            switchNo = Convert.ToInt32(Console.ReadLine()) ;
-
+            Console.Clear();
+            System.Console.WriteLine("Choose Domain of problems to solve (only 1 at this moment!)\n1. Algorithms \n2. Data Structures (so far empty!)");
+            string switchValue = Console.ReadLine();
+            int switchNo = CheckCorrectSwitchNumber(switchValue);
             switch (switchNo)
             {
                 case 1:
@@ -34,15 +33,18 @@ namespace problemSolving
                 default:
                     Menu.MainMenu();
                     break;
-
             }
         }
 
         public static void Algorithms()
         {
+            Console.Clear();
+
             System.Console.WriteLine("ALGORITHMS DOMAIN\nChoose Subbomain of problems to solve\n1. WarmUp \n2. Implementation \n3. Strings\n4. Sorting");
-            int switchNo;
-            switchNo = Convert.ToInt32(Console.ReadLine()) ;
+            
+            string switchValue = Console.ReadLine();
+            int switchNo = CheckCorrectSwitchNumber(switchValue);
+
             // Problems.simpleArraySum();
             switch (switchNo)
             {
@@ -66,10 +68,12 @@ namespace problemSolving
 
         public static void DataStructures()
         {
+            Console.Clear();
 
             System.Console.WriteLine("DATA STRUCTURES DOMAIN\nNothing to do here press any key to go back to main menu!");
-            int switchNo;
-            switchNo = Convert.ToInt32(Console.ReadLine()) ;
+            string switchValue = Console.ReadLine();
+
+            int switchNo = CheckCorrectSwitchNumber(switchValue);
             // Problems.simpleArraySum();
             switch (switchNo)
             {
@@ -85,10 +89,14 @@ namespace problemSolving
 
         public static void WarmUp()
         {
-            System.Console.WriteLine("STRING SUBDOMAIN\nchoose problem to solve or any other key to go back \n1. simpleArraySum \n2. compareTriplets \n3. aVeryBigsum \n4. Diagonal difference \n5. Plus Minus\n6. SPtaircase \n7. miniMaxPlus \n8. Birthday cake candles\n9. timeConversion");
-            int switchNo;
-            switchNo = Convert.ToInt32(Console.ReadLine()) ;
-            // Problems.simpleArraySum();
+            Console.Clear();
+
+            System.Console.WriteLine("WARM UP SUBDOMAIN\nchoose problem to solve or any other key to go back \n1. simpleArraySum \n2. compareTriplets \n3. aVeryBigsum \n4. Diagonal difference \n5. Plus Minus\n6. SPtaircase \n7. miniMaxPlus \n8. Birthday cake candles\n9. timeConversion");
+           
+            string switchValue = Console.ReadLine();
+
+            int switchNo = CheckCorrectSwitchNumber(switchValue);
+
             switch (switchNo)
             {
                 case 1:
@@ -122,13 +130,30 @@ namespace problemSolving
                     Menu.Algorithms();
                     break;
             }
+            MainMenu();
         }
         public static void Implementation()
         {
-            System.Console.WriteLine("Implementation SUBDOMAIN\nchoose problem to solve/press any key to go back\n1. Grading studetns\n2. Apple nad orange\n3. Kangaroo\n4. Between two sets\n5. Breaking records\n6 Birthday\n7. Divisible sum pairs\n8. Migratory birds\n9. day of the programmer\n10 Bon appetit\n11. Sock merchant\n 12. Page count ");
-            int switchNo;
-            switchNo = Convert.ToInt32(Console.ReadLine()) ;
-            // Problems.simpleArraySum();
+            Console.Clear();
+            System.Console.WriteLine("Implementation SUBDOMAIN\n" +
+                "choose problem to solve/press any key to go back\n" +
+                "1. Grading studetns\n" +
+                "2. Apple nad orange\n" +
+                "3. Kangaroo\n" +
+                "4. Between two sets\n" +
+                "5. Breaking records\n" +
+                "6 Birthday\n" +
+                "7. Divisible sum pairs\n" +
+                "8. Migratory birds\n" +
+                "9. day of the programmer\n" +
+                "10 Bon appetit\n" +
+                "11. Sock merchant\n" +
+                "12. Page count ");
+
+            string switchValue = Console.ReadLine();
+
+            int switchNo = CheckCorrectSwitchNumber(switchValue);
+
             switch (switchNo)
             {
                 case 1:
@@ -171,13 +196,17 @@ namespace problemSolving
                     Menu.Algorithms();
                     break;
             }
+            MainMenu();
         }
         public static void Strings()
         {
+            Console.Clear();
+
             System.Console.WriteLine("STRING SUBDOMAIN\nchoose problem to solve/press any key to go back\n1. Super reduced strings\n2. Camel case\n3. Password strength (minimum number)\n4. Two characters\n5. Cesear cipher");
-            int switchNo;
-            switchNo = Convert.ToInt32(Console.ReadLine()) ;
-            // Problems.simpleArraySum();
+            
+            string switchValue = Console.ReadLine();
+            int switchNo = CheckCorrectSwitchNumber(switchValue);
+
             switch (switchNo)
             {
                 case 1:
@@ -199,13 +228,17 @@ namespace problemSolving
                     Menu.Algorithms();
                     break;
             }
+            MainMenu();
         }
 
         public static void Sorting()
         {
+            Console.Clear();
+
             System.Console.WriteLine("SORTING SUBDOMAIN\nchoose problem to solve/press any key to go back\n1. Tutorial intro\n");
-            int switchNo;
-            switchNo = Convert.ToInt32(Console.ReadLine()) ;
+            string switchValue = Console.ReadLine();
+
+            int switchNo = CheckCorrectSwitchNumber(switchValue);
             // Problems.simpleArraySum();
             switch (switchNo)
             {
@@ -216,6 +249,22 @@ namespace problemSolving
                     Menu.Algorithms();
                     break;
             }
+            MainMenu();
+        }
+
+        public static int CheckCorrectSwitchNumber(string switchValue)
+        {
+            int switchNumber = 0;
+            try
+            {
+                switchNumber = Convert.ToInt32(switchValue);
+            }
+            catch (Exception)
+            {
+                System.Console.WriteLine("\nWrong value. Write a number\n");
+            }
+
+            return switchNumber;
         }
     }
 
